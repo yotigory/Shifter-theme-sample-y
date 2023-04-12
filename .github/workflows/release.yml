@@ -45,7 +45,7 @@ jobs:
     # please edit FILES_TO_ARCIVE to suit your project.
     - name: create archive
       env:
-        PACKAGE_NAME: "shifter-theme-sample-y"
+        PACKAGE_NAME: "shifter-github-hosting-theme-y"
         FILES_TO_ARCIVE: "*.php *.md *.css *.txt *.png LICENSE phpcs.xml.dist inc/ js/ languages/ layouts/ template-parts/"
       run: zip -r ${PACKAGE_NAME}.zip ${FILES_TO_ARCIVE}
 
@@ -54,7 +54,7 @@ jobs:
     # ghr - Easily ship your project to your user using Github Releases : https://deeeet.com/ghr/
     - name: upload
       env:
-        PACKAGE_NAME: "shifter-theme-sample-y"
+        PACKAGE_NAME: "shifter-github-hosting-theme-y"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GOPATH: /home/runner/go
       run: |
